@@ -4,3 +4,4 @@ backend/csv-data/recommendations.csv filter=lfs diff=lfs merge=lfs -text
 backend/csv-data/unique_songs.csv filter=lfs diff=lfs merge=lfs -text
 backend/csv-data/unique_users.csv filter=lfs diff=lfs merge=lfs -text
 backend/csv-data/colombia.csv filter=lfs diff=lfs merge=lfs -text
+backend/src/pearson.joblib filter=lfs diff=lfs merge=lfs -text
