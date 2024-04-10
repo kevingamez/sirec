@@ -12,7 +12,7 @@ function Preferences() {
 
   useEffect(() => {
     // Fetch random songs from the endpoint
-    fetch("http://127.0.0.1:8000/songs/random/")
+    fetch("http://172.31.44.111:8000/songs/random/")
       .then((response) => response.json())
       .then((data) => setRecommendedSongs(data))
       .catch((error) => console.error("Error fetching songs:", error));
@@ -47,7 +47,7 @@ function Preferences() {
           rating: 1, // Set rating to 1
         };
 
-        const response = await fetch("http://127.0.0.1:8000/interactions", {
+        const response = await fetch("http://172.31.44.111:8000/interactions", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(interaction),
