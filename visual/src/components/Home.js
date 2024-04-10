@@ -12,14 +12,14 @@ function Home() {
     if (userId) {
       const fetchRecommendations = async () => {
         try {
-          const response = await fetch(`http://172.31.44.111:8000/user/${userId}/recomendations/`);
+          const response = await fetch(`http://54.224.244.169:8000/user/${userId}/recomendations/`);
           if (!response.ok) {
             throw new Error('Failed to fetch recommendations');
           }
           const recommendations = await response.json();
           // Fetch additional information for each song
           const songsWithDetails = await Promise.all(recommendations.map(async (recomendation) => {
-            const songResponse = await fetch(`http://172.31.44.111:8000/songs/${recomendation.item_id}`);
+            const songResponse = await fetch(`http://54.224.244.169:8000/songs/${recomendation.item_id}`);
             if (!songResponse.ok) {
               throw new Error('Failed to fetch song details');
             }
@@ -34,7 +34,7 @@ function Home() {
 
       const fetchNeighbors = async () => {
         try {
-          const response = await fetch(`http://172.31.44.111:8000/user/${userId}/neighbors/`);
+          const response = await fetch(`http://54.224.244.169:8000/user/${userId}/neighbors/`);
           console.log(response)
           if (!response.ok) {
             throw new Error('Failed to fetch neighbors');

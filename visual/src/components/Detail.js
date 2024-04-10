@@ -35,7 +35,7 @@ function Detail(props) {
 
 
   async function getSongDetails(songId) {
-    const response = await fetch(`http://172.31.44.111:8000/songs/${songId}`);
+    const response = await fetch(`http://54.224.244.169:8000/songs/${songId}`);
     if (!response.ok) {
       throw new Error('Failed to fetch song details');
     }
